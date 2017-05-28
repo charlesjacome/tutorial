@@ -1,0 +1,88 @@
+object FormMenuCliente: TFormMenuCliente
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 375
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object btn_registrar_GCM: TButton
+    Align = Top
+    Margins.Left = 20.000000000000000000
+    Margins.Top = 20.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 20.000000000000000000
+    Size.Width = 335.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Registrar GCM'
+    OnClick = btn_registrar_GCMClick
+  end
+  object edt_token_recebido: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 6
+    Position.X = 20.000000000000000000
+    Position.Y = 89.000000000000000000
+    Margins.Left = 20.000000000000000000
+    Margins.Top = 20.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Size.Width = 335.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object tmr_ativar_GCM: TTimer
+    Enabled = False
+    Interval = 5000
+    OnTimer = tmr_ativar_GCMTimer
+    Left = 77
+    Top = 144
+  end
+  object lbl_1: TLabel
+    Align = Bottom
+    StyledSettings = [Family, Style, FontColor]
+    Position.Y = 440.000000000000000000
+    Size.Width = 375.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 18.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'www.Ubliv.com'
+  end
+  object Memo_log: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Top
+    Margins.Left = 20.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 126.000000000000000000
+    Size.Width = 335.000000000000000000
+    Size.Height = 137.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    Viewport.Width = 331.000000000000000000
+    Viewport.Height = 133.000000000000000000
+  end
+  object KinveyProvider_gcm: TKinveyProvider
+    ApiVersion = '3'
+    Left = 77
+    Top = 212
+  end
+  object PushEvents_gcm: TPushEvents
+    Provider = KinveyProvider_gcm
+    AutoActivate = False
+    AutoRegisterDevice = False
+    OnDeviceTokenReceived = PushEvents_gcmDeviceTokenReceived
+    OnDeviceTokenRequestFailed = PushEvents_gcmDeviceTokenRequestFailed
+    OnPushReceived = PushEvents_gcmPushReceived
+    Left = 77
+    Top = 280
+  end
+end

@@ -1,0 +1,208 @@
+object FormMenuCliente: TFormMenuCliente
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 670
+  ClientWidth = 458
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object tmr_ativar_GCM: TTimer
+    Enabled = False
+    Interval = 5000
+    OnTimer = tmr_ativar_GCMTimer
+    Left = 45
+    Top = 560
+  end
+  object lbl_ubliv: TLabel
+    Align = Bottom
+    StyledSettings = [Family, Style, FontColor]
+    Position.Y = 630.000000000000000000
+    Size.Width = 458.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 18.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'www.Ubliv.com'
+  end
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 458.000000000000000000
+    Size.Height = 630.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 50.000000000000000000
+    TabIndex = 0
+    TabOrder = 13
+    TabPosition = PlatformDefault
+    Sizes = (
+      458s
+      580s
+      458s
+      580s
+      458s
+      580s)
+    object TabItem_registra: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 67.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Registrar'
+      object btn_registrar_GCM: TButton
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 111.000000000000000000
+        Size.Width = 438.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Registrar GCM'
+        OnClick = btn_registrar_GCMClick
+      end
+      object edt_token_recebido: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        Position.X = 10.000000000000000000
+        Position.Y = 170.000000000000000000
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 438.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Label_gps_status: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 202.000000000000000000
+        Size.Width = 438.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Label_gps_status'
+      end
+      object Label_ip: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 59.000000000000000000
+        Size.Width = 438.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Server:'
+        object Edit_servidor: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Client
+          TabOrder = 0
+          Text = '192.168.1.42'
+          Margins.Left = 70.000000000000000000
+          Size.Width = 368.000000000000000000
+          Size.Height = 42.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object Layout1: TLayout
+        Align = Top
+        Size.Width = 458.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+      end
+    end
+    object TabItem_Notifica: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 80.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Notifica'#231#227'o'
+      object Memo_log: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 438.000000000000000000
+        Size.Height = 148.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 434.000000000000000000
+        Viewport.Height = 144.000000000000000000
+      end
+      object Button_navegar: TButton
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 163.000000000000000000
+        Size.Width = 438.000000000000000000
+        Size.Height = 70.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Mapa'
+        OnClick = Button_navegarClick
+      end
+    end
+    object TabItem_mapa: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 51.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Mapa'
+      object WebBrowser1: TWebBrowser
+        Align = Client
+        Size.Width = 458.000000000000000000
+        Size.Height = 570.000000000000000000
+        Size.PlatformDefault = False
+        Margins.Top = 10.000000000000000000
+      end
+    end
+  end
+  object KinveyProvider_gcm: TKinveyProvider
+    ApiVersion = '3'
+    Left = 141
+    Top = 541
+  end
+  object PushEvents_gcm: TPushEvents
+    Provider = KinveyProvider_gcm
+    AutoActivate = False
+    AutoRegisterDevice = False
+    OnDeviceTokenReceived = PushEvents_gcmDeviceTokenReceived
+    OnDeviceTokenRequestFailed = PushEvents_gcmDeviceTokenRequestFailed
+    OnPushReceived = PushEvents_gcmPushReceived
+    Left = 229
+    Top = 560
+  end
+  object LocationSensor1: TLocationSensor
+    Active = True
+    OnLocationChanged = LocationSensor1LocationChanged
+    Left = 304
+    Top = 544
+  end
+end
